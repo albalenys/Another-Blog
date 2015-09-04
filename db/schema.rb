@@ -36,6 +36,10 @@ ActiveRecord::Schema.define(version: 20150904144437) do
     t.string   "username",   null: false
     t.string   "email",      null: false
     t.string   "password",   null: false
+    t.string   "avatar"
+    t.string   "city"
+    t.string   "state"
+    t.text     "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
