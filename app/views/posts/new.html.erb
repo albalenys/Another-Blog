@@ -1,5 +1,10 @@
-<%= form_for @post do |f| %>
-  <%= f.text_field :title %><br>
-  <%= f.text_field :content %><br>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <h1>Create Post</h1>
+
+  <%= form_for @post do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+    <%= f.text_area :content %><br>
+    <%= f.submit %>
+  <% end %>
+</div>
