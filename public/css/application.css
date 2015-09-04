@@ -1,0 +1,39 @@
+body {
+  font-family: 'Poiret One', cursive;
+  font-size: 1em;
+}
+
+nav {
+  float: right;
+}
+
+header {
+  padding: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #999;
+}
+
+.logo {
+  color: #000;
+  font-size: 2.5em;
+  font-family: 'Sigmar One', cursive;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+  border: 1px #999 solid;
+  padding: 2em;
+}
+
+h1, h2 {
+  color: #999;
+  font-family: 'Oswald', sans-serif;
+}
+
+.button {
+  margin: 2em;
+}
