@@ -1,8 +1,11 @@
 <div class="container">
   <h1><%= @user.username %>'s Profile</h1>
-  <p><%= @user.avatar %></p>
-  Email: <%= @user.email %><br>
-  City: <%= @user.city %><br>
-  State: <%= @user.state %><br>
-  Bio: <%= @user.bio %>
+  <p><img class="avatar" src="<%=@user.avatar %>"></p>
+
+  <%= render "users/stats" %>
+
+  <h3>Blog Posts</h3>
+  <% @user.posts.each do |post| %>
+    <%= link_to "#{post.title}", post_path(post.id) %><br>
+  <% end %>
 </div>
