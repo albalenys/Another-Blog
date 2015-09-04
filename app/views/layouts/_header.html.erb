@@ -1,13 +1,13 @@
 <header>
-  <a class="logo" href="#">Another Blog.</a>
+  <%= link_to "Another Blog.", root_path, class: "logo" %>
 
   <nav>
     <% if logged_in? %>
-      <a class="button" href="">Create Post</a> |
-      <a class ="button" href="<%= user_path(session[:user_id]) %>">Profile</a> |
+      <%= link_to "Create Post", new_post_path, class: "button" %> |
+      <%= link_to "Profile.", user_path(session[:user_id]), class: "button" %> |
       <a class="button" href="">Log Out</a>
     <% else %>
-      <a class ="button" href="<%= new_user_path %>">Sign Up</a> |
+      <%= link_to "Sign Up", new_user_path, class: "button" %> |
       <a class="button" href="">Log In</a>
     <% end %>
   </nav>
