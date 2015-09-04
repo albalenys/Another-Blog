@@ -4,8 +4,10 @@
 
   <%= render "users/stats" %>
 
-  <h3>Blog Posts</h3>
-  <% @user.posts.each do |post| %>
-    <%= link_to "#{post.title}", post_path(post.id) %><br>
+  <% if !@user.posts.empty? %>
+    <h3>Blog Posts</h3>
+    <% @user.posts.each do |post| %>
+      <%= link_to "#{post.title}", post_path(post.id) %><br>
+    <% end %>
   <% end %>
 </div>

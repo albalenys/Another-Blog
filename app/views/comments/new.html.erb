@@ -2,7 +2,7 @@
   <h1>Leave A Comment</h1>
 
   <% if logged_in? %>
-    <%= form_for @comment do |f| %>
+    <%= form_for [@post, @comment] do |f| %>
       <%= f.text_area :content %><br>
       <%= f.submit %>
     <% end %>

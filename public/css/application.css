@@ -13,6 +13,10 @@ header {
 
 a {
   text-decoration: none;
+  color: #66CCFF;
+}
+
+a:hover {
   color: #999;
 }
 
@@ -36,4 +40,12 @@ h1, h2, h3 {
 
 .button {
   margin: 2em;
+  background: #F5F5F0;
+  padding: 0.4em;
+  border-radius: 0.2em;
+}
+
+.comment {
+  background: #F0FAFF;
+  padding: 1.2em;
 }
