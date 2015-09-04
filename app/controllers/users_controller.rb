@@ -17,6 +17,11 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
   end
 
+  def destroy
+    session.clear
+    redirect_to action:"index", controller:"welcome"
+  end
+
   private
 
   def user_params

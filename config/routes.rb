@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'welcome#index'
   resources :users
+  delete 'users/logout' => 'users#destroy'
+
   resources :posts
   resources :comments
 
