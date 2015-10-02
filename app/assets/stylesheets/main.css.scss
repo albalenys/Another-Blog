@@ -48,6 +48,10 @@ h1, h2, h3 {
   outline: none;
 }
 
+a.button:hover {
+  background: #476B6B;
+}
+
 .center {
   margin: auto;
   text-align: center;
@@ -68,10 +72,13 @@ h1, h2, h3 {
 form {
   text-align: center;
 
-  input[type='text'] {
+  input[type='text'], input[type='password'] {
     width: 80%;
     font-family: 'Oswald', sans-serif;
     font-size: 0.9em;
+    padding: 0.7em;
+    border: none;
+    outline: none;
   }
 
   textarea {
@@ -80,5 +87,8 @@ form {
     height: 10em;
     font-family: 'Oswald', sans-serif;
     font-size: 0.9em;
+    padding: 0.5em;
+    border: none;
+    outline: none;
   }
 }
