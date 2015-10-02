@@ -12,7 +12,7 @@
   <% unless @user.posts.empty? %>
     <h3>Recent Blog Posts</h3>
     <div class="profile-posts">
-      <% @user.posts.limit(3).each do |post| %>
+      <% @recent_posts.each do |post| %>
         <%= link_to "#{post.title}", post_path(post.id) %> on <%= post.created_at %><br>
       <% end %>
     </div>
