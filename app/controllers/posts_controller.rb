@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :authorize, except: [:show]
+
   def index
   end
 
