@@ -1,14 +1,31 @@
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Titillium Web', sans-serif;
+  background-image: asset-url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #CCC;
+}
+
+main {
+  position: relative;
+  width: 60%;
+  margin: 4.6em auto 0;
+  padding: 2em;
+  background: rgba(204, 204, 204, 0.7);
+  min-height: 100%;
 }
 
 a {
   text-decoration: none;
-  color: #66CCFF;
+  color: #ADEBEB;
 }
 
 a:hover {
-  color: #999;
+  color: #7DAAAA;
 }
 
 .container {
@@ -19,7 +36,6 @@ a:hover {
 }
 
 h1, h2, h3 {
-  color: #999;
   font-family: 'Oswald', sans-serif;
 }
 

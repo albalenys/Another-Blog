@@ -5,6 +5,7 @@ header {
   width: 100%;
   padding: 0.8em;
   background: #333;
+  z-index: 1;
 }
 
 .logo, a.logo:hover {
@@ -20,9 +21,5 @@ nav {
   a {
     margin: 2em;
     padding: 0.4em;
-  }
-
-  a:hover {
-    color: #336699;
   }
 }
