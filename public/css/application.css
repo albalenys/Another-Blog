@@ -2,14 +2,6 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
-nav {
-  float: right;
-}
-
-header {
-  padding: 2em;
-}
-
 a {
   text-decoration: none;
   color: #66CCFF;
@@ -17,12 +9,6 @@ a {
 
 a:hover {
   color: #999;
-}
-
-.logo {
-  color: #000;
-  font-size: 2.3em;
-  font-family: 'Alfa Slab One', cursive;
 }
 
 .container {
