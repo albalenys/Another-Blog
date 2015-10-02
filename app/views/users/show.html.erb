@@ -1,13 +1,20 @@
-<div class="container">
-  <h1><%= @user.username %>'s Profile</h1>
-  <p><img class="avatar" src="<%=@user.avatar %>"></p>
+<div class="profile-header">
+  <h1><%= @user.username %>'s
+  <%= gravatar_tag @user, default: "https://cdn0.vox-cdn.com/images/verge/default-avatar.v9899025.gif", html: { class: "avatar" } %>
+  Profile</h1>
+</div>
 
-  <%= render "users/stats" %>
+<div class="profile-container">
+  <div class="profile-stats">
+    <%= render "users/stats" %>
+  </div>
 
-  <% if !@user.posts.empty? %>
-    <h3>Blog Posts</h3>
-    <% @user.posts.each do |post| %>
-      <%= link_to "#{post.title}", post_path(post.id) %><br>
-    <% end %>
+  <% unless @user.posts.empty? %>
+    <h3><%= @user.posts.count %> Blog Posts</h3>
+    <div class="profile-posts">
+      <% @user.posts.each do |post| %>
+        <%= link_to "#{post.title}", post_path(post.id) %> on <%= post.created_at %><br>
+      <% end %>
+    </div>
   <% end %>
 </div>
