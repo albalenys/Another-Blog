@@ -1,0 +1,94 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  background-image: asset-url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #CCC;
+}
+
+main {
+  position: relative;
+  width: 60%;
+  margin: 4.6em auto 0;
+  padding: 2em;
+  min-height: 100%;
+  color: #FFF;
+}
+
+a {
+  text-decoration: none;
+  color: #ADEBEB;
+}
+
+a:hover {
+  color: #7DAAAA;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.comment {
+  background: #F0FAFF;
+  padding: 1.2em;
+}
+
+.button, a.button:hover {
+  background: #587777;
+  padding: 0.8em;
+  border-radius: 0.5em;
+  border: none;
+  color: #000;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1em;
+  outline: none;
+}
+
+a.button:hover {
+  background: #476B6B;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.main-div {
+  background: #587777;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.sub-div {
+  background: rgba(51, 51, 51, 0.6);
+  border-radius: 1em;
+  padding: 1em;
+}
+
+form {
+  text-align: center;
+
+  input[type='text'], input[type='password'] {
+    width: 80%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9em;
+    padding: 0.7em;
+    border: none;
+    outline: none;
+  }
+
+  textarea {
+    margin: auto;
+    width: 80%;
+    height: 10em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9em;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+  }
+}

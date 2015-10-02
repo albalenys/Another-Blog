@@ -2,16 +2,17 @@
 <html>
 <head>
   <title>SinatraToRailsPick1Of3Challenge</title>
-  <%= stylesheet_link_tag    '/css/application', media: 'all' %>
+  <%= stylesheet_link_tag    'application' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<%= render "layouts/header" %>
-<%= yield %>
-
+  <%= render "shared/header" %>
+  <main>
+    <%= yield %>
+  </main>
 </body>
 </html>
