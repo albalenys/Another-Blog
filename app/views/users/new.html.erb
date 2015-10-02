@@ -1,13 +1,11 @@
-<div class="container">
-  <h1>Sign Up</h1>
+<h1>Sign Up</h1>
 
-  <%= form_for @user do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %><br>
-    <%= f.label :email %>
-    <%= f.text_field :email %><br>
-    <%= f.label :password %>
-    <%= f.password_field :password %><br>
-    <%= f.submit "Submit" %>
-  <% end %>
-</div>
+<%= form_for @user do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %><br>
+  <%= f.label :email %>
+  <%= f.text_field :email %><br>
+  <%= f.label :password %>
+  <%= f.password_field :password %><br>
+  <%= f.submit "Submit" %>
+<% end %>
