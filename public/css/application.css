@@ -49,3 +49,8 @@ h1, h2, h3 {
   background: #F0FAFF;
   padding: 1.2em;
 }
+
+.avatar {
+  border-radius: 50%;
+  border: 1px #000 solid;
+}
