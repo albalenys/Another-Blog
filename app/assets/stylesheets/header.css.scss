@@ -1,20 +1,28 @@
 header {
-  padding: 2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8em;
+  background: #333;
 }
 
-.logo {
-  color: #000;
-  font-size: 2.3em;
+.logo, a.logo:hover {
+  color: #FFF;
+  font-size: 2.2em;
   font-family: 'Alfa Slab One', cursive;
 }
 
 nav {
   float: right;
+  margin: 0.8em 1em 0 0;
 
   a {
     margin: 2em;
-    background: #F5F5F0;
     padding: 0.4em;
-    border-radius: 0.2em;
+  }
+
+  a:hover {
+    color: #336699;
   }
 }
