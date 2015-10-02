@@ -5,6 +5,11 @@ Email: <%= @user.email %><br>
 <% if @user.state %>
   State: <%= @user.state %>
 <% end %><br>
-<% if @user.bio %>
-  About <%= @user.username %>: <%= @user.bio %>
-<% end %>
+Blog Posts: <%= @user.posts.count %><br>
+Comments: <%= @user.comments.count %>
+
+<p>
+  <% if @user.bio %>
+    About <%= @user.username %>: <%= @user.bio %>
+  <% end %>
+</p>

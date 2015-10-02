@@ -10,9 +10,9 @@
   </div>
 
   <% unless @user.posts.empty? %>
-    <h3><%= @user.posts.count %> Blog Posts</h3>
+    <h3>Recent Blog Posts</h3>
     <div class="profile-posts">
-      <% @user.posts.each do |post| %>
+      <% @user.posts.limit(3).each do |post| %>
         <%= link_to "#{post.title}", post_path(post.id) %> on <%= post.created_at %><br>
       <% end %>
     </div>
