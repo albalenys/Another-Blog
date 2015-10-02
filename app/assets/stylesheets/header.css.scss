@@ -1,7 +1,3 @@
-nav {
-  float: right;
-}
-
 header {
   padding: 2em;
 }
@@ -10,4 +6,15 @@ header {
   color: #000;
   font-size: 2.3em;
   font-family: 'Alfa Slab One', cursive;
+}
+
+nav {
+  float: right;
+
+  a {
+    margin: 2em;
+    background: #F5F5F0;
+    padding: 0.4em;
+    border-radius: 0.2em;
+  }
 }
