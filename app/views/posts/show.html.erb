@@ -1,8 +1,17 @@
 <div class="container">
   <h1><%= @post.title %></h1>
-  Published on <%= @post.created_at.strftime("%d %b. %Y") %>
-  by <%= link_to "#{@post.user.username}", user_path(@post.user.id) %>
-  <p><%= @post.content %></p>
+  Published on <%= timestamp(@post) %>
+  by <%= link_to "#{@post.user.username}", user_path(@post.user) %>
+
+  <div class="main-div">
+    <p><%= @post.content %></p>
+  </div>
+
+  <p>
+    <div class="center">
+      <%= link_to "Leave a comment", new_post_comment_path(@post), class: "button" %>
+    </div>
+  </p>
 
   <%= render "posts/post_comments" %>
 </div>
