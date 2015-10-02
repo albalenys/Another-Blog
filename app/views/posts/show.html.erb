@@ -1,0 +1,8 @@
+<div class="container">
+  <h1><%= @post.title %></h1>
+  Published on <%= @post.created_at.strftime("%d %b. %Y") %>
+  by <%= link_to "#{@post.user.username}", user_path(@post.user.id) %>
+  <p><%= @post.content %></p>
+
+  <%= render "posts/post_comments" %>
+</div>
