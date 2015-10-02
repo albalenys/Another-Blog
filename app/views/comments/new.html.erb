@@ -3,8 +3,8 @@
 
   <% if logged_in? %>
     <%= form_for [@post, @comment] do |f| %>
-      <%= f.text_area :content %><br>
-      <%= f.submit %>
+      <p><%= f.text_area :content %></p>
+      <%= f.submit "Submit", class: "button" %>
     <% end %>
   <% else %>
     You must be <%= link_to "logged in", new_post_path %> to leave a comment.

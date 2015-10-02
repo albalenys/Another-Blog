@@ -38,23 +38,27 @@ h1, h2, h3 {
 }
 
 .button, a.button:hover {
-  background: #587777;
+  background: #D4E1E1;
   padding: 0.8em;
   border-radius: 0.5em;
   border: none;
-  color: #000;
-  font-family: 'Titillium Web', sans-serif;
+  color: #333;
+  font-family: 'Oswald', sans-serif;
   font-size: 1em;
   outline: none;
 }
 
 a.button:hover {
-  background: #476B6B;
+  background: #BFCACA;
 }
 
 .center {
   margin: auto;
   text-align: center;
+}
+
+.right {
+  float: right;
 }
 
 .main-div {

@@ -1,11 +1,15 @@
-<h3>Comments</h3>
+<h3><%= @post.comments.count %> Comments</h3>
 <% if @post.comments.empty? %>
   <p>There are currently no comments.<br>
-    <%= link_to "Be the first to leave one.", new_post_comment_path(@post.id) %></p>
+    <%= link_to "Be the first to leave one.", new_post_comment_path(@post) %></p>
 <% else %>
-  <p><%= link_to "Leave a comment", new_post_comment_path(@post.id) %></p>
   <% @post.comments.each do |comment| %>
-    <%= comment.user.username %> on <%= comment.created_at.strftime("%d %b. %Y") %><br>
-    <p class="comment"><%= comment.content %></p>
+    <p>
+      <div class="right">
+        <%= link_to comment.user.username, user_path(comment.user) %> on <%= timestamp(comment) %>
+      </div>
+      <br>
+      <div class="sub-div"><%= comment.content %></div>
+    </p>
   <% end %>
 <% end %>
