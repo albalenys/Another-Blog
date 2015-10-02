@@ -1,16 +1,14 @@
-<h1>Welcome.</h1>
+<h1>New blog posts.</h1>
 
-<p>Users must be registered to create posts and comments.</p>
-
-<h3>Recent Blog Posts</h3>
-
-<% if @posts.empty? %>
-  <p>There are currently no blog posts.<br>
-    Log in to <%= link_to "create a new blog post", new_post_path %>.</p>
-<% else %>
-  <% @posts.each do |post| %>
-    <%= post.created_at.strftime("%d %b. %Y") %> |
-    <%= link_to "#{post.title}", post_path(post.id) %> by
-    <%= link_to "#{post.user.username}", user_path(post.user.id) %><br>
+<div class="welcome-posts">
+  <% if @posts.empty? %>
+    <p>There are currently no blog posts.<br>
+      Log in to <%= link_to "create a new blog post", new_post_path %>.</p>
+  <% else %>
+    <% @posts.each do |post| %>
+      <%= post.created_at.strftime("%d %b. %Y") %> |
+      <%= link_to "#{post.title}", post_path(post.id) %> by
+      <%= link_to "#{post.user.username}", user_path(post.user.id) %><br>
+    <% end %>
   <% end %>
-<% end %>
+</div>

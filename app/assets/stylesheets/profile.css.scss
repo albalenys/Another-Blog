@@ -1,11 +1,9 @@
 .profile-header {
-  background: #587777;
-  height: 1em;
   text-align: center;
-  color: #333;
   width: 70%;
   margin: auto;
   padding: 1em;
+  border-radius: 1em;
 }
 
 .avatar {
@@ -18,11 +16,11 @@
 
 .profile-stats {
   background: #587777;
+  border-radius: 1em;
   text-align: left;
   width: 70%;
-  margin: 5em auto 0;
+  margin: auto;
   padding: 1em;
-  color: #333;
 }
 
 .profile-posts {
@@ -30,4 +28,6 @@
   margin: auto;
   width: 70%;
   padding: 1em;
+  background: rgba(51, 51, 51, 0.6);
+  border-radius: 1em;
 }
