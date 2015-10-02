@@ -36,3 +36,15 @@ h1, h2, h3 {
   background: #F0FAFF;
   padding: 1.2em;
 }
+
+.button, a.button:hover {
+  background: #587777;
+  padding: 0.8em;
+  border-radius: 0.5em;
+  color: #000;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
