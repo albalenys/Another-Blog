@@ -1,0 +1,9 @@
+<p>
+  <div class="right">
+    <%= link_to comment.user.username, user_path(comment.user) %> on <%= timestamp(comment) %>
+  </div>
+  <br>
+  <div class="sub-div"><%= comment.content %></div>
+</p>
+
+<%= will_paginate @comments %>
