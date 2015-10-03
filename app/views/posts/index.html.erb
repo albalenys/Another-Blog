@@ -11,8 +11,8 @@
     <% @posts.each do |post| %>
       <p>
         <%= timestamp(post) %> |
-        <%= link_to "#{post.title}", post_path(post.id) %> by
-        <%= link_to "#{post.user.username}", user_path(post.user.id) %>
+        <%= link_to "#{post.title}", post_path(post) %> by
+        <%= link_to "#{post.user.username}", user_path(post.user) %>
       </p>
     <% end %>
   <% end %>
