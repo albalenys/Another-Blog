@@ -9,9 +9,13 @@
       Log in to <%= link_to "create a new blog post", new_post_path %>.</p>
   <% else %>
     <% @posts.each do |post| %>
-      <%= post.created_at.strftime("%d %b. %Y") %> |
-      <%= link_to "#{post.title}", post_path(post.id) %> by
-      <%= link_to "#{post.user.username}", user_path(post.user.id) %><br>
+      <p>
+        <%= timestamp(post) %> |
+        <%= link_to "#{post.title}", post_path(post.id) %> by
+        <%= link_to "#{post.user.username}", user_path(post.user.id) %>
+      </p>
     <% end %>
   <% end %>
 </div>
+
+<%= will_paginate @posts %>
