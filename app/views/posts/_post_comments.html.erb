@@ -1,9 +1,10 @@
-<h3><%= @post.comments.count %> Comments</h3>
-<% if @post.comments.empty? %>
+<h3><%= @comments.count %> Comments</h3>
+
+<% if @comments.empty? %>
   <p>There are currently no comments.<br>
     <%= link_to "Be the first to leave one.", new_post_comment_path(@post) %></p>
 <% else %>
-  <% @post.comments.each do |comment| %>
+  <% @comments.each do |comment| %>
     <p>
       <div class="right">
         <%= link_to comment.user.username, user_path(comment.user) %> on <%= timestamp(comment) %>
@@ -13,3 +14,5 @@
     </p>
   <% end %>
 <% end %>
+
+<%= will_paginate @comments %>

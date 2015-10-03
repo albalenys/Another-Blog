@@ -19,7 +19,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by(id: params[:id])
+    @post = Post.find(params[:id])
+    @comments = @post.comments.paginate(:page => params[:page], :per_page => 10)
   end
 
   private
