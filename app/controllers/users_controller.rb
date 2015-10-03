@@ -18,11 +18,6 @@ class UsersController < ApplicationController
     @recent_posts = @user.posts.limit(3).order(created_at: :desc)
   end
 
-  def destroy
-    session.clear
-    redirect_to root_path
-  end
-
   private
 
   def user_params
