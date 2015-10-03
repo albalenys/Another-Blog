@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to action:"index", controller:"welcome"
+      redirect_to root_path
     else
       error
     end
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def destroy
     session.clear
-    redirect_to action:"index", controller:"welcome"
+    redirect_to root_path
   end
 
   private
