@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to action:"index", controller:"welcome"
+      redirect_to root_path
     else
       error
     end
@@ -16,11 +16,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @recent_posts = @user.posts.limit(3).order(created_at: :desc)
-  end
-
-  def destroy
-    session.clear
-    redirect_to action:"index", controller:"welcome"
   end
 
   private

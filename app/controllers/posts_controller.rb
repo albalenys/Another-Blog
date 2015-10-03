@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   def create
     post = Post.new(post_params.merge(user_id: session[:user_id]))
     if post.save
-      redirect_to action:"index", controller:"welcome"
+      redirect_to post_path(post)
     else
       error
     end

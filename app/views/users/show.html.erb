@@ -6,14 +6,14 @@
 
 <div class="profile-container">
   <div class="profile-stats">
-    <%= render "users/stats" %>
+    <%= render "stats" %>
   </div>
 
   <% unless @user.posts.empty? %>
     <h3>Recent Blog Posts</h3>
     <div class="profile-posts">
       <% @recent_posts.each do |post| %>
-        <%= link_to "#{post.title}", post_path(post.id) %> on <%= post.created_at %><br>
+        <%= link_to "#{post.title}", post_path(post.id) %> on <%= timestamp(post) %><br>
       <% end %>
     </div>
   <% end %>
