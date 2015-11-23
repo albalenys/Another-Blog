@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :find_user, only: [:edit, :update]
+
   def new
     @user = User.new
   end
@@ -18,12 +20,7 @@ class UsersController < ApplicationController
     @recent_posts = @user.posts.limit(3).order(created_at: :desc)
   end
 
-  def edit
-    @user = User.find(session[:user_id])
-  end
-
   def update
-    @user = User.find(session[:user_id])
     if @user.update_attributes(user_params)
       redirect_to user_path(@user)
     else
@@ -36,5 +33,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :email, :password, :city, :state, :bio)
+  end
+
+  def find_user
+    @user = User.find(session[:user_id])
   end
 end
