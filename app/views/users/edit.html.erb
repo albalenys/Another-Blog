@@ -1,0 +1,9 @@
+<h1 class="center">Edit Account</h1>
+
+<%= form_for @user do |f| %>
+  <p><%= f.text_field :email, placeholder: "email" %></p>
+  <p><%= f.text_field :city, placeholder: "city" %></p>
+  <p><%= f.text_field :state, placeholder: "state" %></p>
+  <p><%= f.text_area :bio, placeholder: "tell us about yourself..." %></p>
+  <p><%= f.submit "Submit", class: "button" %></p>
+<% end %>

@@ -1,16 +1,10 @@
 Member since <span class="date"><%= timestamp(@user) %></span><br>
 Last seen on <span class="date"><%= @user.updated_at.strftime("%b %d %Y") %></span><br>
-<% if @user.city %>
+<% unless @user.city.nil? || @user.city == "" %>
   <span class="date">City:</span> <%= @user.city %>
 <% end %><br>
-<% if @user.state %>
+<% unless @user.state.nil? || @user.city == "" %>
   <span class="date">State:</span> <%= @user.state %>
 <% end %><br>
 <span class="count"><%= @user.posts.count %></span> Blog Posts<br>
 <span class="count"><%= @user.comments.count %></span> Comments
-
-<p>
-  <% if @user.bio %>
-    About <%= @user.username %>: <%= @user.bio %>
-  <% end %>
-</p>

@@ -14,30 +14,28 @@
   text-align: center;
 }
 
-.profile-stats {
-  background: #587777;
-  border-radius: 1em;
+.profile-bio, .profile-stats, .profile-posts {
   text-align: left;
+  border-radius: 1em;
   width: 70%;
   margin: auto;
   padding: 1em;
 }
 
-.profile-posts {
-  text-align: left;
-  margin: auto;
-  width: 70%;
-  padding: 1em;
+.profile-bio {
+  background: #587777;
+}
+
+.profile-posts, .profile-stats {
   background: rgba(51, 51, 51, 0.6);
-  border-radius: 1em;
 }
 
 .date {
-  color: #333;
+  color: #ADEBEB;
   font-weight: bold;
 }
 
 .count {
   font-size: 1.5em;
-  color: #333;
+  color: #ADEBEB;
 }

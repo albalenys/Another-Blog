@@ -18,9 +18,23 @@ class UsersController < ApplicationController
     @recent_posts = @user.posts.limit(3).order(created_at: :desc)
   end
 
+  def edit
+    @user = User.find(session[:user_id])
+  end
+
+  def update
+    @user = User.find(session[:user_id])
+    if @user.update_attributes(user_params)
+      redirect_to user_path(@user)
+    else
+      flash[:error] = "Invalid input: must include both title and content."
+      redirect_to edit_user_path
+    end
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+    params.require(:user).permit(:username, :email, :password, :city, :state, :bio)
   end
 end
