@@ -23,6 +23,10 @@ class PostsController < ApplicationController
     @comments = @post.comments.paginate(:page => params[:page], :per_page => 10)
   end
 
+  def journal
+    @posts = Post.where(user: session[:user_id]).paginate(:page => params[:page], :per_page => 20)
+  end
+
   private
 
   def post_params
