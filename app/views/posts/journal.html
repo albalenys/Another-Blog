@@ -1,0 +1,18 @@
+<h1>Your journal.</h1>
+
+<div class="sub-div">
+  <% if @posts.empty? %>
+    <p>You currently do not have any blog posts in your journal.<br>
+      <%= link_to "Write your first!", new_post_path %></p>
+  <% else %>
+    <% @posts.each do |post| %>
+      <p>
+        <h3><%= timestamp(post) %></h3>
+        <%= link_to "#{post.title}", post_path(post) %> by
+        <%= link_to "#{post.user.username}", user_path(post.user) %>
+      </p>
+    <% end %>
+  <% end %>
+</div>
+
+<%= will_paginate @posts %>
