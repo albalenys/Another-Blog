@@ -3,6 +3,7 @@ $(document).ready(function(){
 
   $(".fancybox-form").submit(function(event) {
     parent.$.fancybox.close();
+    self.parent.location.href = "/";
   });
 
   $(".slider-content").hide();
