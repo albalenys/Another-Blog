@@ -3,16 +3,24 @@
 </div>
 
 <h1>New blog posts.</h1>
-<div class="sub-div">
-  <% if @posts.empty? %>
+<% if @posts.empty? %>
+    <div class="sub-div">
     <p>There are currently no blog posts.<br>
       Log in to <%= link_to "create a new blog post", new_post_path %>.</p>
+    </div>
   <% else %>
     <% @posts.each do |post| %>
       <p>
-        <%= timestamp(post) %> |
-        <%= link_to "#{post.title}", post_path(post) %> by
-        <%= link_to "#{post.user.username}", user_path(post.user) %>
+        <div class="left">
+          <span class="highlight"><%= link_to "#{post.title}", post_path(post) %></span> by <%= link_to "#{post.user.username}", user_path(post.user) %>
+        </div>
+        <div class="right">
+          <sub><%= timestamp(post) %></sub>
+        </div>
+        <br>
+        <div class="sub-div">
+          <%= truncate(post.content, length: 100)%>
+        </div>
       </p>
     <% end %>
   <% end %>
