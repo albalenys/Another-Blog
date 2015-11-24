@@ -5,6 +5,7 @@ html, body {
 body {
   font-family: 'Titillium Web', sans-serif;
   background-image: asset-url('background.jpg');
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #CCC;
