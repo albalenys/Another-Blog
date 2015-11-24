@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   delete 'users/logout' => 'users#destroy'
 
-  get 'journal' => 'posts#journal'
+  get 'journal/:id' => 'posts#journal', as: :journal
 
   resources :posts do
     resources :comments

@@ -6,5 +6,5 @@ Last seen on <span class="date"><%= @user.updated_at.strftime("%b %d %Y") %></sp
 <% unless @user.state.nil? || @user.city == "" %>
   <span class="date">State:</span> <%= @user.state %>
 <% end %><br>
-<span class="count"><%= @user.posts.count %></span> Blog Posts<br>
+<span class="count">  <%= link_to "#{@user.posts.count}", journal_path(@user) %> </span> Blog Posts<br>
 <span class="count"><%= @user.comments.count %></span> Comments

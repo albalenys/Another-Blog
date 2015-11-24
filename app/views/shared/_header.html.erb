@@ -4,7 +4,7 @@
   <nav>
     <% if logged_in? %>
       <a href="/posts/new" class= "fancybox" data-fancybox-type= "iframe" >Create Post</a> |
-      <%= link_to "Journal", journal_path %> |
+      <%= link_to "Journal", journal_path(current_user) %> |
       <span class="slider">
         <%= link_to "#{current_user.username}", user_path(session[:user_id]) %>
         <div class="slider-content">
