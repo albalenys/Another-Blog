@@ -15,5 +15,6 @@
   <main class= <%= "container" unless current_page?(new_post_path) %> >
     <%= yield %>
   </main>
+  <%= render "shared/footer" unless current_page?(new_post_path) %>
 </body>
 </html>
