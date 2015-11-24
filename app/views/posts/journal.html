@@ -1,4 +1,4 @@
-<h1>Your journal.</h1>
+<h1><%= @user.username %>'s journal.</h1>
 
 <% if @posts_by_month.empty? %>
   <div class="sub-div">
@@ -7,15 +7,13 @@
   </div>
 <% else %>
   <% @posts_by_month.each do |monthname, posts| %>
-    <h3 class="center"><%= monthname %> 2015</h3>
+    <h3 class="right"><%= monthname %> 2015</h3>
     <% posts.each do |post| %>
-      <p>
-        <sub><%= post.created_at.strftime("%m/%d/%Y") %></sub>
-        <span class="highlight"><%= link_to "#{post.title}", post_path(post) %></span><br>
-        <div class="blog-sample sub-div">
-          <%= truncate(post.content, length: 515) %>
-        </div>
-      </p>
+      <sub><%= post.created_at.strftime("%m/%d/%Y") %></sub>
+      <span class="highlight"><%= link_to "#{post.title}", post_path(post) %></span>
+      <div class="blog-sample sub-div">
+        <%= truncate(post.content, length: 515) %>
+      </div>
     <% end %>
   <% end %>
 <% end %>
