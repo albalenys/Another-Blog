@@ -8,8 +8,8 @@
       <span class="slider">
         <%= link_to "#{current_user.username}", user_path(session[:user_id]) %>
         <div class="slider-content">
-          <p><%= link_to "Account", edit_user_path(session[:user_id]) %></p>
-          <p><%= link_to "Log Out", logout_path, method: "delete" %></p>
+          <%= link_to "Account", edit_user_path(session[:user_id]) %><br>
+          <%= link_to "Log Out", logout_path, method: "delete" %>
         </div>
       </span>
     <% else %>
