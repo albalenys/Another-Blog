@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  $("#slider-content").hide();
-  $(".slider").click(function(){
-    $("#slider-content").slideToggle('slow');
+  $(".slider-content").hide();
+  $(".slider").hoverIntent(function(){
+    $(".slider-content").slideToggle('slow');
   });
 });
