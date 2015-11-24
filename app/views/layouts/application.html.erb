@@ -10,9 +10,9 @@
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
   <script type="text/javascript" src="http://cherne.net/brian/resources/jquery.hoverIntent.minified.js"></script>
 </head>
-<body>
-  <%= render "shared/header" %>
-  <main>
+<body class= <%= "background" unless current_page?(new_post_path) %> >
+  <%= render "shared/header" unless current_page?(new_post_path) %>
+  <main class= <%= "container" unless current_page?(new_post_path) %> >
     <%= yield %>
   </main>
 </body>
