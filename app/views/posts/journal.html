@@ -1,18 +1,18 @@
 <h1>Your journal.</h1>
 
 <div class="sub-div">
-  <% if @posts.empty? %>
+  <% if @posts_by_month.empty? %>
     <p>You currently do not have any blog posts in your journal.<br>
       <%= link_to "Write your first!", new_post_path %></p>
   <% else %>
-    <% @posts.each do |post| %>
-      <p>
-        <h3><%= timestamp(post) %></h3>
-        <%= link_to "#{post.title}", post_path(post) %> by
-        <%= link_to "#{post.user.username}", user_path(post.user) %>
-      </p>
+    <% @posts_by_month.each do |monthname, posts| %>
+      <h3 class="center"><%= monthname %> 2015</h3>
+      <% posts.each do |post| %>
+        <p>
+          <sub><%= post.created_at.strftime("%m/%d/%Y") %></sub>
+          <span class="highlight"><%= link_to "#{post.title}", post_path(post) %></span>
+        </p>
+      <% end %>
     <% end %>
   <% end %>
 </div>
-
-<%= will_paginate @posts %>

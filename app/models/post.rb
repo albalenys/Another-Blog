@@ -7,4 +7,8 @@ class Post < ActiveRecord::Base
   def capitalize_title
     self.title.capitalize!
   end
+
+  def self.sort_by_month
+    self.all.group_by { |post| post.created_at.strftime("%B") }
+  end
 end
