@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   end
 
   def journal
-    @posts = Post.where(user: session[:user_id]).paginate(:page => params[:page], :per_page => 20)
+    @posts_by_month = Post.where(user: session[:user_id]).order(created_at: :desc).sort_by_month
   end
 
   private
