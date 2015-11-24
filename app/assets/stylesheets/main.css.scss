@@ -57,8 +57,18 @@ a.button:hover {
   text-align: center;
 }
 
+.left {
+  float: left;
+}
+
 .right {
   float: right;
+}
+
+.highlight {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
 }
 
 .main-div {

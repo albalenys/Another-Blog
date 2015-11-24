@@ -11,12 +11,16 @@
   <% else %>
     <% @posts.each do |post| %>
       <p>
+        <div class="left">
+          <span class="highlight"><%= link_to "#{post.title}", post_path(post) %></span> by <%= link_to "#{post.user.username}", user_path(post.user) %>
+        </div>
+        <div class="right">
+          <sub><%= timestamp(post) %></sub>
+        </div>
+        <br>
         <div class="sub-div">
-          <%= link_to "#{post.title}", post_path(post) %> by
-          <%= link_to "#{post.user.username}", user_path(post.user) %>
-          <%= timestamp(post) %><br>
           <%= truncate(post.content, length: 100)%>
-       </div>
+        </div>
       </p>
     <% end %>
   <% end %>
