@@ -1,6 +1,7 @@
 <div class="center">
-  <%= link_to "Create Another Post", new_post_path, class: "button" %>
+  <button class="button"><a href="/posts/new" class="fancybox" data-fancybox-type="iframe">Create Another Post</a></button>
 </div>
+
 
 <h1>New blog posts.</h1>
 <% if @posts.empty? %>

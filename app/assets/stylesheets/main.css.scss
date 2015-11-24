@@ -2,7 +2,7 @@ html, body {
   height: 100%;
 }
 
-body {
+.background {
   font-family: 'Titillium Web', sans-serif;
   background-image: asset-url('background.jpg');
   background-attachment: fixed;
@@ -11,13 +11,27 @@ body {
   background-color: #CCC;
 }
 
-main {
+.container {
   position: relative;
   width: 60%;
   margin: 4.6em auto 0;
   padding: 2em;
   min-height: 100%;
   color: #FFF;
+}
+
+.container-popup {
+  position: relative;
+  margin: 3em auto 0;
+
+  input[type='text'] {
+    border: 1px solid #CCC;
+  }
+
+  textarea {
+    height: 20em;
+    border: 1px solid #CCC;
+  }
 }
 
 a {
@@ -107,3 +121,4 @@ form {
     outline: none;
   }
 }
+
