@@ -10,4 +10,9 @@ $(document).ready(function(){
   $(".slider").hoverIntent(function(){
     $(".slider-content").slideToggle('slow');
   });
+
+  $(window).on("scroll", function(event) {
+    if ($(window).scrollTop() >= $("header").height()) $("header").fadeOut(600);
+    else $("header").fadeIn(600);
+  });
 });
