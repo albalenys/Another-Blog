@@ -26,11 +26,17 @@ html, body {
 
   input[type='text'] {
     border: 1px solid #CCC;
+    background: #333;
   }
 
   textarea {
     height: 23em;
-    border: 1px solid #CCC;
+    background: #333;
+    color: #FFF;
+  }
+
+  textarea:focus, input:focus {
+    color: #FFF;
   }
 }
 
@@ -101,7 +107,7 @@ a.button:hover {
 form {
   text-align: center;
 
-  input[type='text'], input[type='password'] {
+  textarea, input[type='text'], input[type='password'] {
     width: 80%;
     font-family: 'Oswald', sans-serif;
     font-size: 0.9em;
@@ -112,19 +118,8 @@ form {
 
   textarea {
     margin: auto;
-    width: 80%;
     height: 10em;
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.9em;
     padding: 0.5em;
-    border: none;
-    outline: none;
-  }
-}
-
-button {
-  a.fancybox {
-    color: #333;
   }
 }
 
