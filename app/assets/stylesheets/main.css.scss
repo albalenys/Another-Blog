@@ -20,26 +20,6 @@ html, body {
   color: #FFF;
 }
 
-.container-popup {
-  position: relative;
-  margin: 3em auto 0;
-
-  input[type='text'] {
-    border: 1px solid #CCC;
-    background: #333;
-  }
-
-  textarea {
-    height: 23em;
-    background: #333;
-    color: #FFF;
-  }
-
-  textarea:focus, input:focus {
-    color: #FFF;
-  }
-}
-
 a {
   text-decoration: none;
   color: #ADEBEB;
