@@ -4,7 +4,7 @@
 </div>
 
 <div class="profile-container">
-  <% if @user.bio %>
+  <% unless @user.bio.nil? || @user.bio == "" %>
     <p>
       <h3>About</h3>
       <div class="profile-bio">
